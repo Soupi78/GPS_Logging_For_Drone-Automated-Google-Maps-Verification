@@ -1,7 +1,8 @@
+#Written By Ethan Sobol, Assumes usage of Selenium Webdriver & an SD card
 import time
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
-with open('E:\GPSLOG03.txt') as f:
+with open('E:\GPSLOG03.txt') as f:  #This Path may vary depending on your machine, just use the path to your SD 
     lines = f.readline() #First line appears as blank for whatever reason, this skips it
     lines2 = f.readline();
     #print (lines2) for testing, uncomment to see NMEA sentence to be parsed
@@ -11,8 +12,8 @@ with open('E:\GPSLOG03.txt') as f:
     lat2 = s[5]
     lat2 = lat2.strip().split('.')
     parsed_data = (lat[0][0]+lat[0][1]+" "+lat[0][2]+lat[0][3]+"."+lat[1]+" "+s[4]+" "+lat2[0][0]+lat2[0][1]+lat2[0][2]+" "+lat2[0][3]+lat2[0][4]+"."+lat2[1]+" "+s[6])
-    #^^The aove code formats the raw LAT/LONG from the NMEA data and sets it to the proper format
-chrome = webdriver.Chrome("C:\\Users\\User\\Desktop\\387project\\chromedriver.exe")
+    #^^The above code formats the raw LAT/LONG from the NMEA data and sets it to the proper format
+chrome = webdriver.Chrome("C:\\Users\\User\\Desktop\\387project\\chromedriver.exe") #This is your path to Chromedriver, which I have supplied in this repo
 chrome.get('http://www.google.com/maps')
 find = chrome.find_element_by_name('q')
 find.send_keys(parsed_data)
