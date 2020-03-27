@@ -12,4 +12,3 @@ Once flight is completed, insert the SD into your computer. You should now be ab
 
 Provided you've done everything above you should now have both a log of your flight locations as well as a method to validate that data using Google Maps. 
 
-THIS IS A TEST TO SEE HOW OCTOBOT SHOWS CHANGED FILES
