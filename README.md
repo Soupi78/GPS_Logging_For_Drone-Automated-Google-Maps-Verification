@@ -11,3 +11,5 @@ Once initial soldering is completed and direct and serial connection have both b
 Once flight is completed, insert the SD into your computer. You should now be able to simply run the python code provided and have it automatically open a google map of the first logged location of the drone. If you run into issue with the python check your Chromedriver path. Provided is the Selenium driver for Google Chrome however this assumes you already have the base Selenium driver instaled on your machine as well as Google Chrome. In addition to having the library installed, you must also ensure that the python code is pointing to the correct loaction for this driver on your machine as my code is setup for my specefic library hierarchy. 
 
 Provided you've done everything above you should now have both a log of your flight locations as well as a method to validate that data using Google Maps. 
+
+THIS IS A TEST TO SEE HOW OCTOBOT SHOWS CHANGED FILES
